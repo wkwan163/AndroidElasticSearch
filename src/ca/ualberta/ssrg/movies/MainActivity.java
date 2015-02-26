@@ -75,10 +75,15 @@ public class MainActivity extends Activity {
 	protected void onResume() {
 		super.onResume();
 		
-		
-
 		// Refresh the list when visible
 		// TODO: Search all
+		movies = new Movies();
+		moviesViewAdapter = new ArrayAdapter<Movie>(this, R.layout.list_item,movies);
+		movieList.setAdapter(moviesViewAdapter);
+		movieManager = new ESMovieManager("");
+		
+		
+		
 		
 	}
 	
